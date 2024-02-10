@@ -1,0 +1,9 @@
+if __name__ == '__main__':
+    n = int(input())
+    max_capacity = 0
+    inside = 0
+    for i in range(n):
+        out, enter = input().split()
+        inside = inside + int(enter) - int(out)
+        max_capacity = max(max_capacity, inside)
+    print(max_capacity)
