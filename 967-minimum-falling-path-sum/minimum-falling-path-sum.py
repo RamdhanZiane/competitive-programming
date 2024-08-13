@@ -11,5 +11,4 @@ class Solution:
         for i in range(n-2,-1,-1):
             for j in range(m):
                 dp[i][j]+=min([dp[i+1][j+y] if 0<=j+y<m else float('inf') for y in range(-1,2)])
-        print(dp)
         return min(dp[0])
