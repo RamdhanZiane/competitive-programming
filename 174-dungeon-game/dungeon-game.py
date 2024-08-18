@@ -9,5 +9,4 @@ class Solution:
                     dp[i][j]=max(-dungeon[i][j]+1,1)
                 else:
                     dp[i][j]=max(min(dp[i+1][j],dp[i][j+1])-dungeon[i][j],1)
-        print(dp)
         return dp[0][0]
